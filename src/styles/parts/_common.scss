@@ -1,0 +1,103 @@
+@use "../globals/" as *;
+@use "sass:math";
+
+// 共通部分
+
+:root {
+    --fontColor: #{$c-black};
+    --hoverColor: #{$c-lightBlue};
+    --fontColorBtn: #{$c-white};
+    --btnBgColor: #{$c-lightBlue};
+    --btnBgColor: #{$c-lightBlue};
+    --btnBgColorHover: #{$c-darkBlue};
+    --footerBgColor: #{$c-black};
+    --footerColor: #{$c-white};
+
+    --mainFont: #{$base-font};
+}
+
+html {
+    font-size: math.div($root-font-size, 16px) * 100%;
+}
+
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic,
+        "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: var(--fontColor);
+}
+
+a {
+    text-decoration: none;
+    color: var(--fontColor);
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: min(96%, 1100px);
+    margin-inline: auto;
+}
+
+.page-title {
+    font-size: 5rem;
+    font-weight: normal;
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+}
+
+.btn {
+    font-size: 1.375rem;
+    background: var(--btnBgColor);
+    color: var(--fontColorBtn);
+    padding: 18px 32px;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    &:hover {
+        background: var(--btnBgColorHover);
+    }
+}
+/* HEADER
+---------------------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+        width: 210px;
+        margin-top: 14px;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 36px;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        margin-top: 34px;
+    }
+
+    & a:hover {
+        color: var(--hoverColor);
+    }
+}
+
+/* FOOTER
+---------------------------- */
+.footer {
+    background: var(--footerBgColor);
+    text-align: center;
+    padding-block: 20px;
+
+    & p {
+        color: var(--footerColor);
+        font-size: 0.875rem;
+    }
+}

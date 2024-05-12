@@ -1,0 +1,63 @@
+body#news {
+    & .news {
+        height: 270px;
+        background: url("/images/news-bg.jpg") center center / cover no-repeat;
+        margin-bottom: 40px;
+
+        & .page-title {
+            text-align: center;
+        }
+    }
+
+    & .news-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        & .post {
+            width: 74%;
+
+            &__info {
+                position: relative;
+                padding-top: 4px;
+                margin-bottom: 40px;
+            }
+
+            &__title {
+                font-family: "Yu Mincho", serif;
+                font-size: 2rem;
+                font-weight: normal;
+                margin-left: 120px;
+            }
+
+            &__date {
+                position: absolute;
+                top: 0;
+                background: #0bd;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                color: #fff;
+                font-size: 1.625rem;
+                text-align: center;
+                padding-top: 10px;
+
+                & span {
+                    display: block;
+                    width: 60%;
+                    margin-inline: auto;
+                    font-size: 1rem;
+                    border-top: 1px solid rgba(255, 255, 255, 0.5);
+                    padding-top: 6px;
+                }
+            }
+
+            &__cat {
+                margin-left: 120px;
+            }
+        }
+        & aside {
+            width: 22%;
+        }
+    }
+}
