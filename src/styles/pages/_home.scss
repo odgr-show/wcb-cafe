@@ -1,11 +1,31 @@
+@use "../globals/" as *;
+@use "sass:math";
+
 body#home {
+    color: var(--fontColor);
+
     & .home {
+        position: relative;
         background: url("/images/main-bg.jpg") center / cover no-repeat;
         min-height: 100vh;
+
+        & .header {
+            & a {
+                color: var(--fontColor);
+
+                &:hover {
+                    color: var(--hoverColor);
+                }
+            }
+        }
 
         &__content {
             text-align: center;
             margin-top: 10%;
+
+            @include mq("md") {
+                margin-top: 30%;
+            }
 
             & .page-title {
                 text-transform: none;

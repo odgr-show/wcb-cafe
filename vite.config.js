@@ -15,6 +15,7 @@ export default defineConfig({
                 // htmlを追加する場合にはこちらに追記
                 index: resolve(root, "index.html"),
                 news: resolve(root, "news.html"),
+                contact: resolve(root, "contact.html"),
             },
         },
     },

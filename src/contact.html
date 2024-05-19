@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/png" href="/images/favicon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>WCB Cafe</title>
+        <title>WCB Cafe - CONTACT</title>
         <meta
             name="description"
             content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ"
@@ -25,8 +25,8 @@
 
         <script type="module" src="./scripts/main.js" defer></script>
     </head>
-    <body id="home">
-        <div class="home">
+    <body id="contact">
+        <div class="contact">
             <header class="header container">
                 <h1>
                     <a href="index.html">
@@ -41,18 +41,41 @@
                     <ul class="header__nav">
                         <li><a href="news.html" target="_blank">News</a></li>
                         <li><a href="menu.html">Menu</a></li>
-                        <li>
-                            <a href="contact.html" target="_blank">Contact</a>
-                        </li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </header>
-            <div class="home__content container">
-                <h2 class="page-title">We'll Make Your Day</h2>
-                <p>
-                    おしゃれなカフェで癒されてみませんか？無添加の食材で体の中からリフレッシュ。
-                </p>
-                <a href="menu.html" class="btn">メニューを見る</a>
+            <div class="container">
+                <h2 class="page-title">contact</h2>
+                <form action="#">
+                    <div>
+                        <label for="name">お名前</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="your-name"
+                            placeholder="名前を入力して下さい"
+                        />
+                    </div>
+                    <div>
+                        <label for="emale">メールアドレス</label>
+                        <input
+                            type="text"
+                            id="email"
+                            name="your-email"
+                            placeholder="メールアドレスを入力して下さい"
+                        />
+                    </div>
+                    <div>
+                        <label for="message">メッセージ</label>
+                        <textarea
+                            name="your-message"
+                            id="message"
+                            placeholder="メッセージを入力して下さい"
+                        ></textarea>
+                    </div>
+                    <input type="submit" class="btn" value="送信" />
+                </form>
             </div>
         </div>
     </body>
