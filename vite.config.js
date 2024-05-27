@@ -17,7 +17,14 @@ export default defineConfig({
                 news: resolve(root, "news.html"),
                 contact: resolve(root, "contact.html"),
             },
+            output: {
+                entryFileNames: "[name].js", // JSファイル名を変更し、[hash]を使用してキャッシュ無効化を行う
+            },
         },
+    },
+    css: {
+        fileName: "[name].css", // CSSファイル名を変更
+        chunkFileNames: "[name].css", // チャンクファイル名も変更
     },
     server: {
         host: true,

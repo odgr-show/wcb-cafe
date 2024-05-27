@@ -1,6 +1,79 @@
+@use "../globals/" as *;
+
+.input-area {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: inset -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+        inset 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
 body#contact {
-    .contact {
+    & .contact {
         background: url("/images/contact-bg.jpg") center/cover no-repeat;
         height: 100vh;
+
+        & page-title {
+            @include mq("md") {
+                margin-top: 40px;
+            }
+        }
+
+        & form {
+            & div {
+                margin-bottom: 14px;
+
+                & label {
+                    display: block;
+                    font-size: 1.125rem;
+                    margin-bottom: 10px;
+                }
+
+                & input[type="text"],
+                input[type="email"] {
+                    @extend .input-area;
+                    width: min(100%, 280px);
+
+                    @include mq("md") {
+                        max-width: 100%;
+                    }
+                }
+
+                & textarea {
+                    @extend .input-area;
+                    width: min(100%, 500px);
+                    height: 6rem;
+                }
+            }
+
+            & input[type="submit"] {
+                border: none;
+                cursor: pointer;
+                line-height: 1;
+            }
+        }
+    }
+
+    & .location {
+        padding: 4% 0;
+
+        & .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__info {
+            width: 22%;
+
+            & p {
+                padding: 12px 10px;
+            }
+        }
+
+        &__map {
+            width: 74%;
+        }
     }
 }
